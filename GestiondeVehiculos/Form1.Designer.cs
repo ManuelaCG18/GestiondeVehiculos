@@ -50,88 +50,96 @@
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(83, 136);
+            this.txtModelo.Location = new System.Drawing.Point(124, 209);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(154, 20);
+            this.txtModelo.Size = new System.Drawing.Size(229, 26);
             this.txtModelo.TabIndex = 0;
             // 
             // cbTipoVehiculo
             // 
             this.cbTipoVehiculo.FormattingEnabled = true;
-            this.cbTipoVehiculo.Items.AddRange(new object[] {
-            "Automovil",
-            "Motocicleta"});
-            this.cbTipoVehiculo.Location = new System.Drawing.Point(83, 83);
+            this.cbTipoVehiculo.Location = new System.Drawing.Point(124, 128);
+            this.cbTipoVehiculo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTipoVehiculo.Name = "cbTipoVehiculo";
-            this.cbTipoVehiculo.Size = new System.Drawing.Size(152, 21);
+            this.cbTipoVehiculo.Size = new System.Drawing.Size(226, 28);
             this.cbTipoVehiculo.TabIndex = 1;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(83, 192);
+            this.txtMarca.Location = new System.Drawing.Point(124, 295);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(154, 20);
+            this.txtMarca.Size = new System.Drawing.Size(229, 26);
             this.txtMarca.TabIndex = 2;
             // 
             // txtPrecioBase
             // 
-            this.txtPrecioBase.Location = new System.Drawing.Point(83, 247);
+            this.txtPrecioBase.Location = new System.Drawing.Point(124, 380);
+            this.txtPrecioBase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecioBase.Name = "txtPrecioBase";
-            this.txtPrecioBase.Size = new System.Drawing.Size(154, 20);
+            this.txtPrecioBase.Size = new System.Drawing.Size(229, 26);
             this.txtPrecioBase.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 64);
+            this.label1.Location = new System.Drawing.Point(128, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Tipo de vehiculo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 120);
+            this.label2.Location = new System.Drawing.Point(128, 185);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Modelo:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 176);
+            this.label3.Location = new System.Drawing.Point(128, 271);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Marca:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 231);
+            this.label4.Location = new System.Drawing.Point(128, 355);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Precio base:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 326);
+            this.label5.Location = new System.Drawing.Point(134, 502);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 8;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(88, 342);
+            this.btnAgregar.Location = new System.Drawing.Point(132, 526);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(125, 31);
+            this.btnAgregar.Size = new System.Drawing.Size(188, 48);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lvVehiculos
             // 
@@ -144,9 +152,10 @@
             this.columnHeader6,
             this.columnHeader7});
             this.lvVehiculos.HideSelection = false;
-            this.lvVehiculos.Location = new System.Drawing.Point(344, 71);
+            this.lvVehiculos.Location = new System.Drawing.Point(412, 109);
+            this.lvVehiculos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lvVehiculos.Name = "lvVehiculos";
-            this.lvVehiculos.Size = new System.Drawing.Size(567, 302);
+            this.lvVehiculos.Size = new System.Drawing.Size(952, 517);
             this.lvVehiculos.TabIndex = 10;
             this.lvVehiculos.UseCompatibleStateImageBehavior = false;
             this.lvVehiculos.View = System.Windows.Forms.View.Details;
@@ -154,17 +163,17 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Precio Final";
-            this.columnHeader1.Width = 74;
+            this.columnHeader1.Width = 94;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tipo Vehiculo";
-            this.columnHeader2.Width = 91;
+            this.columnHeader2.Width = 103;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Modelo";
-            this.columnHeader3.Width = 75;
+            this.columnHeader3.Width = 66;
             // 
             // columnHeader4
             // 
@@ -174,23 +183,23 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Precio Base";
-            this.columnHeader5.Width = 83;
+            this.columnHeader5.Width = 87;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Cargo Extra";
-            this.columnHeader6.Width = 81;
+            this.columnHeader6.Width = 128;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Impuesto";
-            this.columnHeader7.Width = 76;
+            this.columnHeader7.Width = 108;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 450);
+            this.ClientSize = new System.Drawing.Size(1532, 692);
             this.Controls.Add(this.lvVehiculos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label5);
@@ -202,6 +211,7 @@
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.cbTipoVehiculo);
             this.Controls.Add(this.txtModelo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

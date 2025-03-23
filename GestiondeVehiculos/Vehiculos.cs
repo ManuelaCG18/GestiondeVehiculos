@@ -8,12 +8,12 @@ namespace GestiondeVehiculos
 {
     public abstract class Vehiculos
     {
-        public string Modelo {  get; private set; }
+        public string Modelo { get; private set; }
         public string Marca { get; private set; }
         public double PrecioBase { get; private set; }
 
-        protected Vehiculos(string modelo, string marca, double precioBase) 
-        { 
+        protected Vehiculos(string modelo, string marca, double precioBase)
+        {
             if (string.IsNullOrWhiteSpace(modelo) || string.IsNullOrWhiteSpace(marca))
             {
 
@@ -75,13 +75,54 @@ namespace GestiondeVehiculos
         }
     }
 
+    // factory para la creacion de vehiculos
     public class VehiculosFactory
     {
         public static Vehiculos CrearVehiculo(string tipo, string modelo, string marca, double precioBase)
         {
-
+            switch (tipo.ToLower())
+            {
+                case "automovil":
+                    return new Automovil(modelo, marca, precioBase);
+                case "motocicleta":
+                    return new Motocicleta(modelo, marca, precioBase);
+                default:
+                    throw new ArgumentException("Tipo de vehiculo no valido :( ");
+            }
         }
     }
-    
-    
+
+    // singleton para manejar lista de vehiculos
+    public class GestionVehiculos
+    {
+        private static GestionVehiculos _instancia;
+        private static readonly object _lock = new object();
+        
+        public List<Vehiculos> Vehiculos { get; private set; }
+
+        private GestionVehiculos()
+        {
+            Vehiculos = new List<Vehiculos>();
+        }
+
+        public static GestionVehiculos ObtenerInstancia()
+        {
+            if (_instancia == null)
+            {
+                lock (_lock)
+                {
+                    if (_instancia == null)
+                    {
+                        _instancia = new GestionVehiculos();
+                    }
+                }
+            }
+            return _instancia;
+        }
+
+        public void AgregarVehiculo(Vehiculos vehiculo)
+        {
+            Vehiculos.Add(vehiculo);
+        }
+    }
 }
